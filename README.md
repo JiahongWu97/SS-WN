@@ -1,2 +1,2 @@
-# SS_WN
+# SS-WN
 secret sharing based wiretap network database
