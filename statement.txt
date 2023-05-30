@@ -1,0 +1,81 @@
+The folder "5" contains inequalities and extreme directions of every structure.
+"shannon" means the Shannon region, "linear" means the linear region, "others" means the case of $N\leq 4$ where two regions are the same.
+The classification of IDs when $N=5$ is concluded from the paper of Jackson, please forgive my poor English, the name 2_3_5_6, 2_3_5_7, 3_5_5_7 is concluded from the (average) information ratio,
+the name ci means the eight structures which are solved in linear sense only, the name ideal means the case when information ratio equals 1, the name undetermined is respect to the work done by Jackson thus far, the name abnormal means the rest ones.
+
+Then let us see the detail of the txt file, e.g.,
+#1: 1,2,3,45 - 4,5 ---> 1,2,3,4,5 
+[0.0, 0.0, 0.0, 0.0, 1.0, 0.0]
+[0.0, 0.0, 0.0, 1.0, 0.0, 0.0]
+[0.0, 0.0, 1.0, 0.0, 0.0, 0.0]
+[0.0, 1.0, 0.0, 0.0, 0.0, 0.0]
+[1.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+['(1)-(S)', '(2)-(S)', '(3)-(S)', '(4)-(S)', '(5)-(S)', '(S)']
+
+We use # to identify the case with the same qualified set {1,2,3,45}, {4,5} is the forbidden set, 1,2,3,4,5 means the set-difference bound.
+[0.0, 0.0, 0.0, 0.0, 1.0, 0.0]
+[0.0, 0.0, 0.0, 1.0, 0.0, 0.0]
+[0.0, 0.0, 1.0, 0.0, 0.0, 0.0]
+[0.0, 1.0, 0.0, 0.0, 0.0, 0.0]
+[1.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+means the extreme directions, 
+['(1)-(S)', '(2)-(S)', '(3)-(S)', '(4)-(S)', '(5)-(S)', '(S)'] means the inequalities.
+Any txt file has the same qualified set.
+
+Then consider the folder points.
+Any txt file lists the extreme directions that need to construct the corresponding linear schemes, and considering the maxmial forbidden set is enough.
+Any xlsx file lists the specific linear schemes. ID means the number behind # in the folder 5, index means the counting only, Delta means the forbidden set, ER means the extreme directions, Matrix means the generator matrix
+ S  S  1  1  1  2  2  2  3  3  3  4  4  4  5  5
+ 1  0  0  0  0  0  0  1  0  0  0  1  0  0  0  1
+ 0  1  0  0  0  1  0  1  0  0  0  0  0  1  1  1
+ 0  0  1  0  0  0  0  1  0  0  0  0  0  0  0  1
+ 0  0  0  1  0  0  0  0  0  0  0  0  0  1  1  1
+ 0  0  0  0  1  1  0  1  0  0  0  1  1  1  0  0
+ 0  0  0  0  0  0  1  0  0  0  0  0  1  1  0  0
+ 0  0  0  0  0  0  0  0  1  0  0  1  0  1  0  1
+ 0  0  0  0  0  0  0  0  0  1  0  1  0  0  1  0
+ 0  0  0  0  0  0  0  0  0  0  1  0  1  0  0  0
+here S means the message block, 1 means the $Y_1$ block and like wise.
+
+
+The folder planes lists all non-set-difference bounds and their proofs.
+Any txt file without the prefix _ lists the bounds. Any txt file with _ lists the proofs, e.g.,
+(2345S)<=(12345S)
+(1345S)<=(12345S)
+(1245S)<=(12345S)
+(12)<=(1)+(2)
+(12345S)+(345S)<=(1345S)+(2345S)
+(13)<=(1)+(3)
+(12345S)+(245S)<=(1245S)+(2345S)
+(12345S)+(235S)<=(1235S)+(2345S)
+(15)<=(1)+(5)
+(235S)+(5S)<=(25S)+(35S)
+(123S)+(1S)<=(12S)+(13S)
+(2345)+(35)<=(235)+(345)
+(125S)+(1S)<=(12S)+(15S)
+(2345)+(25)<=(235)+(245)
+(1235)+(12)<=(123)+(125)
+********************
+2.0(12)+(13)+(15)+(25)+(35)+(1235)+2.0(2345)+2.0(1S)+(123S)+(5S)+(125S)+2.0(235S)+(245S)+(345S)<=3.0(1)+(2)+(3)+(123)+(5)+(125)+2.0(235)+(245)+(345)+2.0(12S)+(13S)+(15S)+(25S)+(35S)+(1235S)+2.0(2345S)
+********************
+2.0[(12S)=(12)]
+(13S)=(13)
+(123S)=(123)
+(15S)=(15)
+(125S)=(125)
+(1235S)=(1235)
+2.0[(2345S)=(2345)]
+2.0[(1)+(S)=(1S)]
+(5)+(S)=(5S)
+(25)+(S)=(25S)
+(35)+(S)=(35S)
+2.0[(235)+(S)=(235S)]
+(245)+(S)=(245S)
+(345)+(S)=(345S)
+--------------------
+
+the first part above ******************** lists the basic Shannon-type inequalities, the second part lists the summation of these Shannon-type inequalities, the third part lists the system conditions needed with coefficients.
+
+
